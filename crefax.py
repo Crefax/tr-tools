@@ -16,7 +16,7 @@ while var == 1 :
 6) Güvenlik Duvarı tespit
 
 9) Python derleyici
-0) Setup
+0) Setup & Update
 00) Çıkış
 	""")
 	anaislem = raw_input("İşlem no seçin: ")
@@ -198,7 +198,8 @@ Python dosyalarınızı derleyerek kodlarını okunmaz hale getirin py uznatıs�
 		os.system("apt-get install wpscan")
 		os.system("apt-get install nmap")
 		os.system("apt-get install wafw00f")
-		os.system("rm -r /root/Desktop/tr-tools")
 		os.system("git clone https://github.com/Crefax/tr-tools.git")
+		os.system("cp tr-tools/crefax.py .")
+		os.system("rm -r tr-tools")
 	elif(anaislem == "00"):
 		break
