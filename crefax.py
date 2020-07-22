@@ -17,6 +17,7 @@ while var == 1 :
 
 0) Setup & Update
 00) Çıkış
+-df) Daha fazla bilgi alın.
 	""")
 	kategori = raw_input("İşlem no seçin: ")
 	if(kategori == "1"): #Port İşlemleri başlangıç
@@ -225,3 +226,33 @@ MAC Adres Değiştirme Programına Hoş Geldiniz.
 		os.system("rm -r tr-tools")
 	elif(kategori == "00"):
 		break
+	elif(kategori == "-df"):
+		os.system("clear")
+		print("""
+-setup : sadece gerekli programları indirir. githubdan yeni indirdiyseniz gerekli olabilir.
+-update : toolları günceller githubdan yeni aldıysanız ihtiyacınız yoktur.
+-v : programın verion bilgisini gösterir.
+
+		""")
+		enter = raw_input("Geri dönmek için enter tuşuna basınız.")
+
+	elif(kategori == "-v" or kategori == "-V"):
+		os.system("clear")
+		print("TR-Tools version: 1.0.7")
+		enter = raw_input("Geri dönmek için enter tuşuna basınız.")
+	elif(kategori == "-update"):
+		os.system("clear")
+		os.system("git clone https://github.com/Crefax/tr-tools.git")
+		os.system("cp tr-tools/tr-tools.py .")
+		os.system("rm -r tr-tools")
+		os.system("Güncelleme tamamlandı, çalışmayan tool var ise -setup ile gerekli programların kurulumunu yapabilirsin. veya 0 parametresi ile her ikisinide yapabilirsin.")
+		enter = raw_input("Geri dönmek için enter tuşuna basınız.")
+	elif(kategori == "-setup"):
+		os.system("clear")
+		os.system("apt-get install figlet")
+		os.system("apt-get install nikto")
+		os.system("apt-get install wpscan")
+		os.system("apt-get install nmap")
+		os.system("apt-get install wafw00f")
+		print("Kurulum tamamlandı, Peki TR-Tools güncel mi ? -update ile güncelleyebilirsin.")
+		enter = raw_input("Geri dönmek için enter tuşuna basınız.")
