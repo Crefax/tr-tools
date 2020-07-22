@@ -14,8 +14,10 @@ while var == 1 :
 4) WordPress Tarama
 5) Mac değiştirme
 6) Güvenlik Duvarı tespit
-
+7) Port KabaKuvvet Saldırısı
+8) WebSitesi uzantı tespit
 9) Python derleyici
+
 0) Setup & Update
 00) Çıkış
 	""")
@@ -134,18 +136,6 @@ MAC Adres Değiştirme Programına Hoş Geldiniz.
 			os.system("macchanger -p eth0")
 			os.system("ifconfig eth0 up")
 			print("\033[92mMAC Adresi Orijinale Döndürüldü.")
-	elif(anaislem == "9"):
-		import os
-		os.system("clear")
-		os.system("figlet Derleyici")
-
-		print("""
-Python dosyalarınızı derleyerek kodlarını okunmaz hale getirin py uznatısını pyc olarak değiştirir.
-		""")
-
-		derle = raw_input("Dosyanızın İsmini Girin: ")
-
-		py_compile.compile(derle)
 
 	elif(anaislem == "6"):
 		os.system("clear")
@@ -190,6 +180,25 @@ Python dosyalarınızı derleyerek kodlarını okunmaz hale getirin py uznatıs�
 			os.system("ncrack -p 3389 -U " + kullaniciadi + " -P " + sifre + " " + hedefip)
 		if(islemno == "7"):
 			os.system("ncrack -p 3306 -U " + kullaniciadi + " -P " + sifre + " " + hedefip)
+
+	elif(anaislem == "8"):
+		os.system("clear")
+		os.system("figlet Dirb")
+		dirburl = raw_input("Taranacak web sitesinin urlsi: ")
+		os.system("dirb " + dirburl)
+
+
+	elif(anaislem == "9"):
+		os.system("clear")
+		os.system("figlet Derleyici")
+
+		print("""
+Python dosyalarınızı derleyerek kodlarını okunmaz hale getirin py uznatısını pyc olarak değiştirir.
+		""")
+
+		derle = raw_input("Dosyanızın İsmini Girin: ")
+
+		py_compile.compile(derle)
 
 
 	elif(anaislem == "0"):
