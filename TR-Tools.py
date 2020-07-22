@@ -238,15 +238,15 @@ MAC Adres Değiştirme Programına Hoş Geldiniz.
 
 	elif(kategori == "-v" or kategori == "-V"):
 		os.system("clear")
-		print("TR-Tools version: 1.0.7")
-		enter = raw_input("Geri dönmek için enter tuşuna basınız.")
+		print("\033[96mTR-Tools version: 1.0.8")
+		enter = raw_input("\033[96mGeri dönmek için enter tuşuna basınız.")
 	elif(kategori == "-update"):
 		os.system("clear")
 		os.system("git clone https://github.com/Crefax/tr-tools.git")
-		os.system("cp tr-tools/tr-tools.py .")
+		os.system("cp tr-tools/TR-Tools.py .")
 		os.system("rm -r tr-tools")
-		os.system("Güncelleme tamamlandı, çalışmayan tool var ise -setup ile gerekli programların kurulumunu yapabilirsin. veya 0 parametresi ile her ikisinide yapabilirsin.")
-		enter = raw_input("Geri dönmek için enter tuşuna basınız.")
+		print("""\033[96mGüncelleme tamamlandı, çalışmayan tool var ise -setup ile gerekli programların kurulumunu yapabilirsin. veya 0 parametresi ile her ikisinide yapabilirsin.""")
+		enter = raw_input("\033[96mGeri dönmek için enter tuşuna basınız.")
 	elif(kategori == "-setup"):
 		os.system("clear")
 		os.system("apt-get install figlet")
@@ -254,5 +254,5 @@ MAC Adres Değiştirme Programına Hoş Geldiniz.
 		os.system("apt-get install wpscan")
 		os.system("apt-get install nmap")
 		os.system("apt-get install wafw00f")
-		print("Kurulum tamamlandı, Peki TR-Tools güncel mi ? -update ile güncelleyebilirsin.")
-		enter = raw_input("Geri dönmek için enter tuşuna basınız.")
+		print("\033[96mKurulum tamamlandı, Peki TR-Tools güncel mi ? -update ile güncelleyebilirsin.")
+		enter = raw_input("\033[96mGeri dönmek için enter tuşuna basınız.")
