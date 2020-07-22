@@ -222,7 +222,7 @@ MAC Adres Değiştirme Programına Hoş Geldiniz.
 		os.system("apt-get install nmap")
 		os.system("apt-get install wafw00f")
 		os.system("git clone https://github.com/Crefax/tr-tools.git")
-		os.system("cp tr-tools/tr-tools.py .")
+		os.system("cp tr-tools/TR-Tools.py .")
 		os.system("rm -r tr-tools")
 	elif(kategori == "00"):
 		break
@@ -238,7 +238,7 @@ MAC Adres Değiştirme Programına Hoş Geldiniz.
 
 	elif(kategori == "-v" or kategori == "-V"):
 		os.system("clear")
-		print("\033[96mTR-Tools version: 1.0.8")
+		print("\033[96mTR-Tools version: 1.0.7")
 		enter = raw_input("\033[96mGeri dönmek için enter tuşuna basınız.")
 	elif(kategori == "-update"):
 		os.system("clear")
