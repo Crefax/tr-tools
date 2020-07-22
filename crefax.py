@@ -6,7 +6,9 @@ import py_compile
 
 var = 1 
 while var == 1 :
-
+	os.system("clear")
+	print("\033[31m")
+	os.system("figlet TR-Tools by Crefax")
 	print("""
 \033[92m
 1) Port İşlemleri
@@ -221,5 +223,5 @@ MAC Adres Değiştirme Programına Hoş Geldiniz.
 		os.system("git clone https://github.com/Crefax/tr-tools.git")
 		os.system("cp tr-tools/tr-tools.py .")
 		os.system("rm -r tr-tools")
-	elif(kategorikategori == "00"):
+	elif(kategori == "00"):
 		break
