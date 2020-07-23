@@ -21,7 +21,8 @@ while var == 1 :
 	""")
 	kategori = raw_input("İşlem no seçin: ")
 	if(kategori == "1"): #Port İşlemleri başlangıç
-		os.system("figlet Port İşlemleri")
+		os.system("clear")
+		os.system("figlet Port islemleri")
 		print("""
 1) Port Tarama
 2) Port Kaba Kuvvet Saldırısı
@@ -159,9 +160,9 @@ Wordpress Tarama Programına Hoş Geldiniz.
 				os.system("wpscan --url " + site + " --enumerate u")
 
 
-	elif(kategori == "3"):
+	elif(kategori == "3"): #diğer başlangıç
 		os.system("clear")
-		os.system("figlet Diğer")
+		os.system("figlet Diger")
 
 		print("""
 1) Mac Adresi değiştirme
