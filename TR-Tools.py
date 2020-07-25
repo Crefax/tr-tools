@@ -27,6 +27,7 @@ while var == 1:
 		print("""
 1) Port Tarama
 2) Port Kaba Kuvvet Saldırısı
+3) SNPM Portundan Bilgi Toplama
 
 		""")
 		islem = input("İşlem no seçin: ")
@@ -101,7 +102,7 @@ Bu Program nmap aracını kullanarak port tarama vb işlemleri yapar.
 
 		elif(islem == "3"):
 			os.system("clear")
-			os.system("SNMP Bilgi Toplama")
+			os.system("figlet SNMP Bilgi Toplama")
 			ip = input("Site ip girin: ")
 			os.system("snmp-check " + ip)
 			enter = input("\033[96mİşleminiz tamamlandı. Geri dönmek için enter tuşuna basınız.")
@@ -307,7 +308,7 @@ MAC Adres Değiştirme Programına Hoş Geldiniz.
 
 	elif(kategori == "-v" or kategori == "-V"):
 		os.system("clear")
-		print("\033[96mTR-Tools version: 1.1.5")
+		print("\033[96mTR-Tools version: 1.1.6")
 		enter = input("\033[96mGeri dönmek için enter tuşuna basınız.")
 	elif(kategori == "-update"):
 		os.system("clear")
