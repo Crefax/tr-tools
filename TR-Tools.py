@@ -99,6 +99,12 @@ Bu Program nmap aracını kullanarak port tarama vb işlemleri yapar.
 				os.system("ncrack -p 3306 -U " + kullaniciadi + " -P " + sifre + " " + hedefip)
 				enter = input("\033[96mİşleminiz tamamlandı. Geri dönmek için enter tuşuna basınız.")
 
+		elif(islem == "3"):
+			os.system("clear")
+			os.system("SNMP Bilgi Toplama")
+			ip = input("Site ip girin: ")
+			os.system("snmp-check " + ip)
+			enter = input("\033[96mİşleminiz tamamlandı. Geri dönmek için enter tuşuna basınız.")
 	elif(kategori == "2"): #Web saldırıları başlangıç
 		os.system("clear")
 		os.system("figlet Web Attack tools")
@@ -108,6 +114,7 @@ Bu Program nmap aracını kullanarak port tarama vb işlemleri yapar.
 3) WebSitesi GÜvenlik Duvarı Tespit
 4) VPN Kontrol
 5) Wordpress Taraması
+6) Alt Domain Taraması
 		""")		
 		islem = input("İşlem no girin: ")
 		if(islem == "1"):
@@ -175,6 +182,12 @@ Wordpress Tarama Programına Hoş Geldiniz.
 				site = input("Site Adresi Girin: ")
 				os.system("wpscan --url " + site + " --enumerate u")
 				enter = input("\033[96mİşleminiz tamamlandı. Geri dönmek için enter tuşuna basınız.")
+		elif(islem == "6"):
+			os.system("clear")
+			os.system("figlet Alt Domain Taraması")
+			domain = input("Site adresini girin: ")
+			os.system("fierce -dns " + domain)
+			enter = input("\033[96mİşleminiz tamamlandı. Geri dönmek için enter tuşuna basınız.")
 
 	elif(kategori == "3"): #Dosya İşlemleri başlangıç
 		os.system("clear")
@@ -187,7 +200,7 @@ Wordpress Tarama Programına Hoş Geldiniz.
 
 		if(islem == "1"):
 			os.system("clear")
-			os.system("figlet RAR-ZIP CRACK")
+			os.system("figlet RAR & ZIP Crack")
 			print("""
 
 1) RAR Kırma
@@ -275,6 +288,8 @@ MAC Adres Değiştirme Programına Hoş Geldiniz.
 		os.system("apt-get install wpscan")
 		os.system("apt-get install nmap")
 		os.system("apt-get install wafw00f")
+		os.system("apt-get install snmp-check")
+		os.system("apt-get install snmpcheck")
 		os.system("git clone https://github.com/Crefax/tr-tools.git")
 		os.system("cp tr-tools/TR-Tools.py .")
 		os.system("rm -r tr-tools")
@@ -308,5 +323,7 @@ MAC Adres Değiştirme Programına Hoş Geldiniz.
 		os.system("apt-get install wpscan")
 		os.system("apt-get install nmap")
 		os.system("apt-get install wafw00f")
+		os.system("apt-get install snmp-check")
+		os.system("apt-get install snmpcheck")
 		print("\033[96mKurulum tamamlandı, Peki TR-Tools güncel mi ? -update ile güncelleyebilirsin.")
 		enter = input("\033[96mGeri dönmek için enter tuşuna basınız.")
