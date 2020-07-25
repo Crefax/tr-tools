@@ -46,14 +46,18 @@ Bu Program nmap aracını kullanarak port tarama vb işlemleri yapar.
 			if(islemno == "1"):
 				hedefip = raw_input("Hedef ip girin: ")
 				os.system("nmap " + hedefip)
+				enter = raw_input("\033[96mİşleminiz tamamlandı. Geri dönmek için enter tuşuna basınız.")
 
 			elif(islemno == "2"):
 				hedefip = raw_input("Hedef ip girin: ")
 				os.system("nmap -sS -sV " + hedefip)
+				enter = raw_input("\033[96mİşleminiz tamamlandı. Geri dönmek için enter tuşuna basınız.")
 
 			elif(islemno == "3"):
 				hedefip = raw_input("Hedef ip girin: ")
 				os.system("nmap -O " + hedefip)
+				enter = raw_input("\033[96mİşleminiz tamamlandı. Geri dönmek için enter tuşuna basınız.")
+
 		elif(islem == "2"):
 			os.system("clear")
 			os.system("figlet Port Kaba Kuvvet")
@@ -74,20 +78,25 @@ Bu Program nmap aracını kullanarak port tarama vb işlemleri yapar.
 
 			if(islemno == "1"):
 				os.system("ncrack -p 21 -U " + kullaniciadi + " -P " + sifre + " " + hedefip)
-
+				enter = raw_input("\033[96mİşleminiz tamamlandı. Geri dönmek için enter tuşuna basınız.")
 			if(islemno == "2"):
-				os.system("ncrack -p 22 -U " + kullaniciadi + " -P " + sifre + " " + hedefip)
-
+				os.system("ncrack -p 22 -U " + kullaniciadi + " -P " + sifre + " " + hedefip)			
+				enter = raw_input("\033[96mİşleminiz tamamlandı. Geri dönmek için enter tuşuna basınız.")
 			if(islemno == "3"):
 				os.system("ncrack -p 23 -U " + kullaniciadi + " -P " + sifre + " " + hedefip)
+				enter = raw_input("\033[96mİşleminiz tamamlandı. Geri dönmek için enter tuşuna basınız.")
 			if(islemno == "4"):
 				os.system("ncrack -p 80 -U " + kullaniciadi + " -P " + sifre + " " + hedefip)
+				enter = raw_input("\033[96mİşleminiz tamamlandı. Geri dönmek için enter tuşuna basınız.")
 			if(islemno == "5"):
 				os.system("ncrack -p 139 -U " + kullaniciadi + " -P " + sifre + " " + hedefip)
+				enter = raw_input("\033[96mİşleminiz tamamlandı. Geri dönmek için enter tuşuna basınız.")
 			if(islemno == "6"):
 				os.system("ncrack -p 3389 -U " + kullaniciadi + " -P " + sifre + " " + hedefip)
+				enter = raw_input("\033[96mİşleminiz tamamlandı. Geri dönmek için enter tuşuna basınız.")
 			if(islemno == "7"):
 				os.system("ncrack -p 3306 -U " + kullaniciadi + " -P " + sifre + " " + hedefip)
+				enter = raw_input("\033[96mİşleminiz tamamlandı. Geri dönmek için enter tuşuna basınız.")
 
 	elif(kategori == "2"): #Web saldırıları başlangıç
 		os.system("clear")
@@ -109,16 +118,20 @@ Bu Programda nikto aracı ile zaafiyet tespiti yapılıyor.
 
 			hedefip = raw_input("Hedef ip girin: ")
 			os.system("nikto -h " + hedefip)
+			enter = raw_input("\033[96mİşleminiz tamamlandı. Geri dönmek için enter tuşuna basınız.")
+
 		elif(islem == "2"):
 			os.system("clear")
 			os.system("figlet Dirb")
 			dirburl = raw_input("Taranacak web sitesinin urlsi: ")
 			os.system("dirb " + dirburl)
+			enter = raw_input("\033[96mİşleminiz tamamlandı. Geri dönmek için enter tuşuna basınız.")
 		elif(islem == "3"):
 			os.system("clear")
 			os.system("figlet Guvenlik Duvari Tespit")
 			site = raw_input("Site Adresini Girin: ")
 			os.system("wafw00f " + site)
+			enter = raw_input("\033[96mİşleminiz tamamlandı. Geri dönmek için enter tuşuna basınız.")
 		elif(islem == "4"):
 			os.system("clear")
 			os.system("figlet VPN Kontrol")
@@ -129,6 +142,7 @@ Bu Programda nikto aracı ile zaafiyet tespiti yapılıyor.
 			hedefip = raw_input("Hedef İp Girin: ")
 
 			os.system("ike-scan " + hedefip)
+			enter = raw_input("\033[96mİşleminiz tamamlandı. Geri dönmek için enter tuşuna basınız.")
 		elif(islem == "5"):
 			os.system("clear")
 			os.system("figlet WORDPRESS TARAMA")
@@ -146,19 +160,20 @@ Wordpress Tarama Programına Hoş Geldiniz.
 			if(islemno=="1"):
 				site = raw_input("Site Adresi Girin: ")
 				os.system("wpscan --url " + site)
-
+				enter = raw_input("\033[96mİşleminiz tamamlandı. Geri dönmek için enter tuşuna basınız.")
 			elif(islemno == "2"):
 				site = raw_input("Site Adresi Girin: ")
 				os.system("wpscan --url " + site + " --enumerate p")
-
+				enter = raw_input("\033[96mİşleminiz tamamlandı. Geri dönmek için enter tuşuna basınız.")
 			elif(islemno == "3"):
 				site = raw_input("Site Adresi Girin: ")
 				os.system("wpscan --url " + site + " --enumerate t")
+				enter = raw_input("\033[96mİşleminiz tamamlandı. Geri dönmek için enter tuşuna basınız.")
 
 			elif(islemno == "4"):
 				site = raw_input("Site Adresi Girin: ")
 				os.system("wpscan --url " + site + " --enumerate u")
-
+				enter = raw_input("\033[96mİşleminiz tamamlandı. Geri dönmek için enter tuşuna basınız.")
 
 	elif(kategori == "3"): #diğer başlangıç
 		os.system("clear")
@@ -188,21 +203,20 @@ MAC Adres Değiştirme Programına Hoş Geldiniz.
 				os.system("macchanger -r eth0")
 				os.system("ifconfig eth0 up")
 				print("\033[92mYeni MAC Adresi Random Belirlendi.")
-
-
+				enter = raw_input("\033[96mİşleminiz tamamlandı. Geri dönmek için enter tuşuna basınız.")
 			if(islemno=="2"):
 				macadres = raw_input("Yeni MAC Adres Girin: ")
 				os.system("ifconfig eth0 down")
 				os.system("macchanger --mac " + macadres + " eth0")
 				os.system("ifconfig eth0 up")
 				print("\033[92mYeni MAC Adresi Elle Belirlendi.")
-
+				enter = raw_input("\033[96mİşleminiz tamamlandı. Geri dönmek için enter tuşuna basınız.")
 			if(islemno=="3"):
 				os.system("ifconfig eth0 down")
 				os.system("macchanger -p eth0")
 				os.system("ifconfig eth0 up")
 				print("\033[92mMAC Adresi Orijinale Döndürüldü.")
-
+				enter = raw_input("\033[96mİşleminiz tamamlandı. Geri dönmek için enter tuşuna basınız.")
 		elif(islem == "2"):
 			os.system("clear")
 			os.system("figlet Derleyici")
