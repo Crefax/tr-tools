@@ -253,7 +253,7 @@ MAC Adres Değiştirme Programına Hoş Geldiniz.
 
 	elif(kategori == "-v" or kategori == "-V"):
 		os.system("clear")
-		print("\033[96mTR-Tools version: 1.0.7")
+		print("\033[96mTR-Tools version: 1.1.2")
 		enter = raw_input("\033[96mGeri dönmek için enter tuşuna basınız.")
 	elif(kategori == "-update"):
 		os.system("clear")
