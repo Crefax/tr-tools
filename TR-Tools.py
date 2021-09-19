@@ -201,7 +201,7 @@ Wordpress Tarama Programına Hoş Geldiniz.
 
 		if(islem == "1"):
 			os.system("clear")
-			os.system("figlet RAR & ZIP Crack")
+			os.system("figlet RAR ZIP Crack")
 			print("""
 
 1) RAR Kırma
@@ -272,10 +272,10 @@ MAC Adres Değiştirme Programına Hoş Geldiniz.
 				enter = input("\033[96mİşleminiz tamamlandı. Geri dönmek için enter tuşuna basınız.")
 		elif(islem == "2"):
 			os.system("clear")
-			os.system("figlet Derleyici")
+			os.system("figlet Obfuscator")
 
 			print("""
-	Python dosyalarınızı derleyerek kodlarını okunmaz hale getirin py uznatısını pyc olarak değiştirir.
+Python obfuscator
 			""")
 
 			derle = input("Dosyanızın İsmini Girin: ")
