@@ -195,7 +195,7 @@ Wordpress Tarama Programına Hoş Geldiniz.
 		os.system("figlet Dosya Islemleri")
 		print("""
 1) RAR-ZIP Şifre kırma
-2) 
+2) Fotoğraf analizi
 		""")
 		islem = input("İşlem no girin: ")
 
@@ -227,6 +227,16 @@ Wordpress Tarama Programına Hoş Geldiniz.
 			elif(secim=="3"):
 				print("")
 				os.system("sudo cat sifre.txt")
+		
+		elif(islem == "2"):
+			os.system("clear")
+			os.system("figlet Fotoğraf Analiz")
+			print("""
+
+			""")
+			photo = input("Fotoğraf konumunu girin: ")
+			os.system("exiftool " + photo)
+			enter = input("\033[96mİşleminiz tamamlandı. Geri dönmek için enter tuşuna basınız.")
 
 	elif(kategori == "4"): #diğer başlangıç
 		os.system("clear")
@@ -306,9 +316,15 @@ Python obfuscator
 		""")
 		enter = input("Geri dönmek için enter tuşuna basınız.")
 
-	elif(kategori == "-v" or kategori == "-V"):
+	elif(kategori == "-v" or kategori == "-V" or kategori == "-changelog"):
 		os.system("clear")
-		print("\033[96mTR-Tools version: 1.1.6")
+		print("""\033[96mTR-Tools version: 1.1.8
+changelog:
++ 1.1.6 | changelog
+* 1.1.7 | Fixed RAR ZIP Crack
+* 1.1.8 | Fixed python obfuscator
++ 1.1.9 | Fotoğraf analizi
+		""")
 		enter = input("\033[96mGeri dönmek için enter tuşuna basınız.")
 	elif(kategori == "-update"):
 		os.system("clear")
